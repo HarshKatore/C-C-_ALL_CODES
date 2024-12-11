@@ -1,0 +1,50 @@
+*{ /*root of dom*/
+    /* this is for global scope 
+    interview q can be define in universal selector 
+    
+    yes will work but but both have different purposes :root is psudo class selector ...The universal selector targets all elements, while :root is specifically used for defining CSS variables at the root level of the document.*/
+    --newred:rgba(237, 2, 194, 0.333);
+
+}
+.a{
+    height: 200px;
+    width: 250px;
+    background-color:var(--newred);
+}
+.b{
+    /*minmax, rgb, url,repeat translate transform  etc..*/
+    height: calc(100% - 100px);
+    width: max(20%,50px);
+    /* width: min(30px,40%); */
+
+
+    --mycolor:rgba(255, 204, 0, 0.333);
+/* same like define alternative name and for replaceble ie if i want to replace just one change (int local ) */
+    background-color:var(--mycolor);
+
+    padding:30px;
+    border: 2px solid black;
+
+    /* transition-property: background-color; /*property to change*/
+    /* transition: 1s; */
+    /* transition-delay: 12s; 0how late to start and timing time after start to end */ 
+    /* can give all in it or its optional but all is  bad practice performance decreaae */
+
+    /* shorthand notaion contain 4 things=transition-delay
+transition-duration
+transition-property
+transition-timing-function   (how transition change look.. speed easein slow start end fast, ease out vise versa , ease mid fast if you want your own go inspect - see transition vali line in code , touch curve icon in front of existing function then change curve copy below curve eqn paste it in original code at function place ) */
+ 
+/* transition: transform 0.2ms ease 1s; 3 is delay and 1 is timingease is pattern see */
+
+transition: transform 2s cubic-bezier(0.88, 0.03, 0, 1.26) 1s;
+/* transition: 2s; same as this just ention other thiongs also */
+}
+.b:hover{
+    /* transitions=cnange of state of particular element from one state to other in some time */
+    /* background-color: blueviolet; */
+
+    transform: scale(2) translatex(200px) rotate(360deg);
+    
+}
+/* transition is change of states and transform is one of the state like background  */

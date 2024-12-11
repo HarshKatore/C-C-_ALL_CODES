@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#container {
+  background-color: blueviolet;
+  height: 500px;
+  border: 3px solid black;
+  display: grid; /* same as flex box fb related to content and g is related to page layout */
+
+  /* grid-template-columns: 310px 299px 320px; */
+  grid-template-columns: 1fr 1fr 1fr; /* fraction to makee responsive */
+  /* grid-template-columns: repeat(3, 1fr); 3 *1fr */
+  /* grid-template-columns: 200px repeat(2, 1fr); */
+
+  grid-template-rows: 90px 90px 90px;
+
+  gap: 15px; /*to take gap ow no gap in betn grid cell though content not there so looks gap*/
+}
+.box {
+  background-color: aquamarine;
+  border: 3px solid black;
+  /* width: 80px; */
+  /* height: 80px ; */
+}
+
+#i1 {
+  /*if you want to make any content in container occupy more than one row/col */
+  /*item property*/
+  grid-column-start: 1; /*here  we gave line drw and see its line no.*/
+  grid-column-end: 3;
+}
+#i {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+/* each cell contain each item and box fill flow go html flow wise wise */
+#i8 {
+  /* grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;   //suppose mid lines are attached to each other
+    grid-column-end: 4; */
+
+  /* short hand notatuion for above two */
+  grid-area: 4/1/5/4;
+}

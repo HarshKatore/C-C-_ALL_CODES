@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #container {
+    background-color: blueviolet;
+    height: 500px;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: 100px 100px 100px; 
+  /* gar means any no of rows like fb more scrol more rows and minmax for row of len min.. and max... */
+    grid-auto-rows: minmax(100,auto);
+  
+    gap: 15px; 
+
+/* grid properties */
+
+justify-content: space-between;  /* start end centre, space around betn evenly same as flex box container*/
+
+align-items: baseline; /* align content for gap betn rows or lines in y axis and item is for betn cells*/
+/*start end baseline stretch */
+
+align-content: space-evenly;
+
+
+/* place item = justify item+align item */
+  }
+.box{
+    border: 1px solid black;
+    background-color: blue;
+    height: 70px;
+    width: 70px;
+}
+
+#b1{ 
+    /* cell properties same... */
+    justify-self: end;
+    
+    align-self: center;
+
+    /* place self =     justify item+ align item */
+}

@@ -1,0 +1,195 @@
+<!-- meta tag
+1]It gives info about document to browser which is used for SEO(info is read by search engine ) and description for preview of website which is not there in webpage itself 
+2] eg. author, description, Keywords, 
+3]
+4]
+ -->
+
+<!-- in web dev if you go stepby step all further options will be given by ide eg: if for tag we 
+write <> directly no endtag come ow it come automatically ,same with font size write it in "" one by one   -->
+<!-- block element automatically starts from new line but inline continues in same line -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- table border (if we write table there only ,then only outer border comes when we add tr td there then for each row and col seperate border comes so 2 border shown so now we use collapse) -->
+    <style>
+        table,tr,td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!--	para    -->
+    <p> This is paragraph</p>
+    <!--	All Type of heading-->
+    <h1>This is heading</h1>
+    <h2>This is heading</h2>
+    <h3>This is heading</h3>
+    <h4>This is heading</h4>
+    <h5>This is heading</h5>
+    <h6>This is heading</h6>
+
+    <!--	blank line or space(break) -->
+    <p> line1 is this........</p>
+    <br/>
+    <p> line2 is this........</p>
+
+    <!-- new line withing same para	(nested break) -->
+    <p> harsh and <br/> khushi </p>
+    
+    <!-- link(anchor tag) redirect to given link in same tab -->
+    <a href="https://google.com"> khow more </a>
+<br/>
+    <!-- to open link in  new tab  -->
+    <a href="https://google.com" target="_blank"> khow more </a>
+<br/>
+    <!-- image straight from the google image address(img ,alt for alternative text if not shown)  200 is pixel bydefault count, you can write 200px this can also write in '%' explore how...-->
+    <img height="200" width="200" src="https://recipes.timesofindia.com/photo/53110729.cms?imgsize=160019">
+    <!-- image downloaded and saved in same folder where html file is saved-->
+ <br/>
+    <img src="sp.jfif" height="200" width="200">
+
+    <!-- horizontal line(mdn hr horizontal rule)    hw->make line red -->
+    <hr>
+    <!-- poet problem ie p + br replaced by pre (it prints as it was written in file) -->
+    <pre>
+        yar tera
+        superstar desi 
+        kalakar
+    </pre>
+    <!-- inline css.... decoration related properties (kind of css)   hw->background going long make it only till word end-->
+    <!-- font size can be written in px num also like img but here px after  number mandatry -->
+    <!-- after writing : ide give list if choosen from there ; comes its not mandaatory -->
+    <p style="color:burlywood">baby baby baby ooooo</p>
+    <p style="background-color:red;">baby baby baby ooooo</p>
+    <p style="font-size:25px;">baby baby baby ooooo</p>
+    <p style="font-size:x-large">baby baby baby ooooo9</p>
+    <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">baby baby baby ooooo</p>
+    <p style="text-align: center;">baby baby baby ooooo</p>
+
+    <!-- formatting ->bold italiic small delete mark subscript superscr.. -->
+    <b>(1)This is a paragraph::::::</b>    
+<br/>    
+    <i>(2)This is a paragraph::::::</i>
+<br/>    
+    <small>(3)This is a paragraph::::::</small>
+<br/>    
+    <del>(4)This is a paragraph::::::</del>
+<br/>    
+    <small>(5)This is a paragraph::::::</small>
+<br/>    
+    <i>(6)This is a <b>big</b> paragraph::::::</i>
+<br/>    
+    <i>(7)This is a <mark>big</mark> paragraph::::::</i>
+
+    <!-- subscript & superscript  -->
+    <p>x<sup>2</sup>+y<sup>2</sup>=z<sup>4</sup></p>
+    <p>x<sub>2</sub>+y<sub>2</sub>=z<sub>4</sub></p>
+
+    <!-- inline comment -->
+    <p>I am <!-- Harsh--> katore</p>
+
+    <!-- underline -->
+    <u>harsh is underlined</u>
+
+    <!-- List (li*5) shortcut to print li tab at a time / nested list -->
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+    </ul>
+
+
+    <ol>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>
+            <ul>
+                <li>six1</li>
+                <li>six2</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <!-- Table (tr*no of rows||||td*no.of.col)           borders of table=we have done style of table by style tag css in head
+    for caption in bottom we specify it in css at head 
+    -->
+    <table>
+        <caption>MY SAVINGS</caption>
+        <tr>
+            <td>Month</td>
+            <td>Savings</td>
+        </tr>
+        <tr>
+            <td>jan</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Feb</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>Mar</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>600</td>
+        </tr>
+    </table>
+
+
+
+    <!-- good practice output same ..... also generally row1 is bold so use th insted of td  also add th in border to get order at r1-->
+    <table>
+        <caption>MY SAVINGS</caption>
+       <thead>
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+       </thead>
+       
+       <tbody>
+        <tr>
+            <td>jan</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Feb</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>Mar</td>
+            <td>300</td>
+        </tr>
+       </tbody>
+
+       <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>600</td>
+        </tr>
+       </tfoot>
+       
+    </table>
+
+    
+        <!-- pending or hw-> rowspan,colspan,rowgroup,colgroup,caption..etc -->
+        <!-- hw-> how to adda favicon?(in tab, symbol is favicon before text and text is  title of tab) -->
+        <!-- hw->tags to study 1.blockcodes 2.q 3.cite 4.address 5.abbr abbrivation -->
+</body>
+</html>

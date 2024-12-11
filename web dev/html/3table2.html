@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td,th{
+            border: 3px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            caption-side: bottom;
+        }
+    </style>
+</head>
+<body>
+    <!-- td is replaced by th to make that block bold/heading 
+    @rowspan is stretching a particular cell upto several rows same for colspan (span for a cell can be done right and down)
+    @all 3 parts head, body, footer are seperate dont try to span with two different parts
+    @in style tag for border ,we done text align as we are doing span and bottom caption
+-->
+
+    <table>
+        <caption>MY SAVINGS</caption>
+       <thead>
+        <tr>
+            <th colspan="2">Month</th>
+            <th >year</th>
+            
+        </tr>
+       </thead>
+       
+       <tbody>
+        <tr>
+            <td >jan</td>
+            <td colspan="2" rowspan="2">100</td>
+        </tr>
+        <tr>
+            <td >Feb</td>
+            
+            
+        </tr>
+        <tr>
+            <td>march</td>
+            <td >500</td>
+        </tr>
+       </tbody>
+
+       <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>600</td>
+        </tr>
+       </tfoot>
+       
+    </table>
+
+
+
+<br/>
+
+    <table>
+        <caption>[Spaned table]</caption>
+        <tr>
+            <td colspan="2">500</td>
+            <!-- we erased this cell -->
+            <td>500</td>
+        </tr>
+        <tr>
+            
+            <td>400</td>
+            <td rowspan="2">400</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>300</td>
+            <!-- er -->
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td colspan="2" rowspan="2">200</td>
+            <!-- er -->
+        </tr>
+        <tr>
+            <td>100</td>
+           <!-- er -->
+           <!-- er -->
+        </tr>
+    </table>
+</body>
+</html>

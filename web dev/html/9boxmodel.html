@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- in border solid work as continous not as color name -->
+    <style> 
+        .box{
+            height: 100px;
+            width: 400px;
+            border: 1px solid black;    
+            margin: 10px; 
+            padding: 25px;  
+            box-sizing: border-box;     /*to make padding occupy space inside box itself and content size shrink ow it takes extra space outside*/
+        }
+        #o{
+            background-color: orange;
+        }
+        #w{
+            background-color: white;
+        }
+        #g{
+            background-color: green;
+        }
+
+
+        /* there are basically three coloring technique:1 rgb eg=rgb(21,21,23) 2. hexadecimal  eg=#121212 3.predefined eg=red */
+    </style>
+</head>
+<body>
+   <div class="box" id="o">This is div but is comes in the form of box on web page see </div> 
+   <div class="box" id="w">This is div but is comes in the form of box on web page see </div> 
+   <div class="box" id="g">This is div but is comes in the form of box on web page see </div> 
+</body>
+</html>

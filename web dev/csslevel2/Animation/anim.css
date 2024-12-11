@@ -1,0 +1,57 @@
+.a{
+    height: 200px;
+    background-color:red;
+    border: 3px solid black;
+}
+.b{
+    /*minmax, rgb, url,repeat translate transform  etc..*/
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    background-color: violet;
+    border: 4px double black;
+
+    animation-name: harsh;
+    animation-duration: 3s;
+    animation-iteration-count: 4;
+    animation-fill-mode: ease-in;
+    animation-delay: 1s;
+    animation-direction: normal;
+    /* animation-fill-mode: ; */
+
+
+}
+
+
+/* to mention start end and mid state of animation 
+keyframes is used */
+
+/* @keyframes harsh{
+    from{
+        width: 150px;
+    }
+    to{
+        width: 800px;
+    }
+} */
+
+
+/* transition = we specify properties and in previous to next step change is happened like previous and hovering state && parent specifier proprrerties to specific selector property (eg in project heading and subheading subheading was also heading and has head property then changes to subhead and all those changes are by transition property)
+animation= continous chang in something similar to case 2*/
+
+
+@keyframes harsh{
+    0%{
+        width: 0%;
+        background-color: orange;
+    }
+    30%{
+        width: 50%;
+        background-color: lawngreen;
+    }
+    50%{
+        width: 100%;
+        border-color: blue;
+    }
+}

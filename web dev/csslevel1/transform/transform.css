@@ -1,0 +1,12 @@
+.box{
+    background-color: aqua;
+     /* transform: translate(100px,20px);    -> moving x and y dirn */
+    /* transform: rotate(-45deg); */
+    margin: 200px;
+    /* transform: scale(2,3);        /*it zooms it here 2x in horizontal and 3x in vertical */
+    transform: skew(45deg);           /*tilts*/   
+
+
+}
+
+

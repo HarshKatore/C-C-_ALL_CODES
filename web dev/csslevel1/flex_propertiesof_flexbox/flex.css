@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;             /*make border and padding to occupy space from content no outer   universal selector*/
+}
+.container{
+    height: 400px;
+    width: 100%;
+    color: rgb(221, 145, 52);
+    border: 2px solid green;
+    display: flex;
+
+    /* flex-direction: column;    arrange column wise   by default it is row */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row-reverse; */
+
+
+     flex-wrap: wrap;         /*it fixes the width if we sqeeze them while inspect their width will not get smaller it goes next line down   */
+    /* flex-wrap: wrap-reverse;          same but go up also 3] no wrap which is by default */
+
+    /* flex-flow: column wrap-reverse;      both at same time */
+
+    /* justify-content: flex-start;     comes at start around main axis ie x axis*/
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-around;     equal spacing between items not equal in corners */
+    /* justify-content: space-evenly;    same but including corners */
+    /* justify-content: space-between;   same but no space in corner */
+
+    /*align-items: flex-start;         same as above just with movement at y axis so it goes top*/
+    /* align-items: center; */
+    /* align-items: flex-end; */
+    /* align-items: stretch;           stretch upto parent container height ie default  y axis */
+   /* align-items: baseline;      if content inside box has diff heights like h1 h2 etc then by this we make them at same base line*/
+
+
+    /* to bring content at center old ques from bothaxis(here we apply it on inner boxes not text) */
+    justify-content: center;
+    align-items: center;
+
+  /*  gap: 10px;   /*dont do this with margin bcozit will consume extra space blank*/
+    /* now we increased width of flex child so there are two rows now  so to arrange them row wise  we use 
+    only its row wise
+    */
+   
+   /* align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;
+    */
+
+}
+.box{
+    border: 1px solid black;
+    background-color: blueviolet;
+    width: 50px;
+    /* flex-basis: 50px;       same as width only diff is if content in any box is bigger than width then width will hide extra while basis will increase width ie make it responsive while doing this we must do border box to  adjust border space within */
+    /* flex-basis:50%;      now each box occupy 50% of container width and remaining flex ie go down or up */
+    /* flex-grow: 1; this makes boxes width such that it will occupy afull total available width */
+    
+}
+#box1{
+    order: 4;   /*by default order of all boxes are 0*/
+    /* flex-grow: 1;     box 1 occupy all remaining width */
+    /* flex-shrink: 4;         on squeezing box 1 will shrink faster than them */
+}
+#box2{
+    order:3;
+    /* align-self: stretch;      stretch for single box like align item */
+    /* align-self:flex-start ;     like align item for 1 box*/
+    /* align-self: flex-end; */
+    /* align-self: center; */
+
+
+}

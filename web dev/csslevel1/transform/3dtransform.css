@@ -1,0 +1,19 @@
+/* 3d transform - for working on 3rd axis we on perspective*/
+
+div {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+.translated {
+  transform: perspective(15px) translatez(-10px) translateX(30px); /*15 px is dist of screen from eye , 10px is quantity to move in z dirn manun box mage gela'-'*/
+}
+.scaled {
+  margin: 200px;
+  transform: perspective(350px) scaleZ(6) rotateX(45deg) rotateY(30deg); /*we cant see but its 2x in z axis now*/
+  /* transform: rotateZ(40deg);  for rotate on z we dont need perspective on why */
+}
+
+/* translate and scale in z axis need perspective not for rotate*/

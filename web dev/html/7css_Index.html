@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- style tag contains css configuration, css code there are more 2  ways also.. -->
+<style>
+    /* selector->(used  to select an element to be style)     1]tag selector: tag type as a selector / applied to all tags */
+    p{
+        color: red;
+        font-size: larger;
+    }
+
+    h1{
+        background-color: aquamarine;
+    }
+
+    /* 2]class selector = for applying set of styling for some elements (tag sel apply to all tag and only particular tag but class allows mixed and some elements......class is given as an attribute to entity to be style those will be styled )*/
+    .c1 {
+        color: rgb(110, 255, 124);
+    }
+    .c2{
+        background-color: blueviolet;
+    }
+
+    /* 3]ID selector= uniquely styling particular element giving id as an attribute to element to be style */
+    #i1{
+        color: aqua;
+        font-size: medium;
+        
+    }
+    #i2{
+        color: rgb(255, 145, 233);
+        font-size: x-large;
+
+    }
+   
+    #firstbutton{
+        color: rgb(254, 0, 51);
+        background-color: rgb(15, 169, 240);
+        
+    }
+    /* 4]psudo - class  selector (psudoclass is a keyword added to selector that specifies that specifies a 'special state of selected element' (to change special state of class,id,tag selector  )   */
+ 
+    #firstbutton:hover{
+        color:rgb(0, 21, 249);
+    }
+    #firstbutton2:hover{
+        color:yellow;
+    }
+    .hi:hover{
+        color:rgb(158, 108, 250);
+    }
+    button:hover{
+        color:rgb(55, 250, 65);
+    }
+    a:hover{
+        color:blueviolet;
+    }
+
+
+    /* 5] Multiple seletor -> we use more than one tag at a time as selector like in table,td,tr  */
+
+    /* HW
+    6]universal sel. 7]Nested selector 8]attribute selector
+    */
+
+
+
+
+
+
+    /* specificity(!important>inline>id>class>tagselector     we can use !important keyword in any selector to do specifically by breaking rule but its a bad practice)*/
+    div{
+        color:aquamarine !important;
+    }
+    .y{
+        color: aqua;
+    }
+    #x{
+        color: brown;
+    }
+</style>
+
+
+</head>
+<body>
+    <p>This is my first paragraph....</p>
+    <p>This is my second paragraph....</p>
+    <h1>This is my second paragraph....</h1>
+    <h2 class="c1">This is my second paragraph....</h2>
+    <h3 class="c1">This is my second paragraph....</h3>
+    <h2 class="c2">This is my second paragraph....</h2>
+    <h4 id="i1">This is my second paragraph....</h4>
+    <h5 id="i2">This is my second paragraph ji ha....</h5>
+    <button id="firstbutton">submit</button>
+    <button id="firstbutton2">submit</button>
+    <button class="hi">submit</button>
+    <button>submit</button>
+<br>
+    <a href="https://google.com">BOOK NOW</a>
+
+
+<!-- specificity -->
+<div id="x" class="y" style="color: blue;">This is harsh by the way</div>
+
+</body>
+</html>

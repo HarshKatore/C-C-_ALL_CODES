@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    background-color: blueviolet;
+    height: 500px;
+    border: 3px solid black;
+    display: grid; 
+    
+   
+    grid-template-columns: 1fr 4fr 1fr ; 
+
+    grid-template-rows: 1fr 5fr 1fr;
+
+    grid-template-areas: 
+    "a a a"
+    "b b b"
+    "c c c";
+
+    gap: 3px; 
+}
+.box{
+    background-color: aquamarine;
+    border: 3px solid black;
+    
+
+} 
+
+#i1{ 
+   grid-area: a; 
+}
+#i2
+{
+    grid-area: b;
+}
+#i3{
+ grid-area: c;
+}
+/* each cell contain each item and box fill flow go html flow wise wise */

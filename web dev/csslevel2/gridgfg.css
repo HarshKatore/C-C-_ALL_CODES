@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    background-color: blueviolet;
+    height: 500px;
+    border: 3px solid black;
+    display: grid; 
+    
+   
+    grid-template-columns: 1fr 4fr 1fr ; 
+
+    grid-template-rows: 1fr 5fr 1fr;
+
+    gap: 3px; 
+}
+.box{
+    background-color: aquamarine;
+    border: 3px solid black;
+    
+
+} 
+
+#i1{ 
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#i5{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* media queries = for different screens size we define different different css properties and after a specific threshod values executes another css  */
+@media(max-width:400px){ /*if width less than this then apply following */
+    #container{
+        grid-gap:30px;  /*other properties same*/
+    
+        grid-template-rows: repeat(5,1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+    }
+    #i1{
+        grid-area: a;
+    }
+    #i2{
+        grid-area: b;
+    }
+    #i3{
+        grid-area: c;
+    }
+    #i4{
+        grid-area: d;
+    }
+    #i5{
+        grid-area: e;
+    }
+    
+}
+.childcont{
+    
+        background-color: blueviolet;
+        height: 50px;
+        border: 3px solid black;
+        display: grid; 
+        
+       
+        grid-template-columns: 1fr 4fr  ; 
+    
+        grid-template-rows: 1fr 5fr ;
+    
+        gap: 1px; 
+    }
+    .div{
+        background-color: hsl(120, 100%, 75%);
+        border: 3px solid black;
+        
+    
+    }   
+
+/*for multiple condition use and key word 
+@media(max-width:800px) and (min-width:400px){
+//more than 400 ,less than 800
+
+
+easily max width means if less than that apply and min for if greaterthan that apply
+}
+
+
+we can write multiple queries for multiple layout
+*/
+
+/* each cell contain each item and box fill flow go html flow wise wise */

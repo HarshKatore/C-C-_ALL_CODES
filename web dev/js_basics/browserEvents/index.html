@@ -1,0 +1,86 @@
+<!-- browser events= its an announcement given by the browser at various stages of execution ,listner  respond to it 
+eg dom content loaded, all img loaded
+
+events are invisible but by method monitorevents we can see an event once its triggered
+
+interfacxe is an blueprint.
+eventTarget is top level interface so everything is there under it like p,div etc,  implemented by objects that can receive events and can have listners(_gives corresponding response) for them,,
+--eventTarget inherits node(chars to tag t token to node to DOM) and it inherits elements(<p></p>)
+eventTArget has 3 methodes
+ 1.addeventlistners()   it respond to events
+ 2.removeEventListners
+ 3.dispatchEventListners
+
+
+
+ 1]
+psudo code
+
+<event target>.addEventListner(<enent-to-listen-for> , <function to done in  respond>)
+
+events target is compenent on which we want to apply the listner
+eg.document.eventListner('click',function(){
+    console.log('click is done');
+});
+
+let content = document.querySelector('word');
+content.addeventListner(click,function(){
+    content.style.color=red;
+});
+
+
+
+for removing:
+function fun(){
+    console.log('hartsh kays');
+}
+document.addEventListner('click',fun});
+
+same target ,same type and same function needs to be there to remove but even we copy same but there address is diff fn is object so we can remiove only if fn is defined outside and given in both
+document.removeEvents('click',fun);
+-->
+<!-- 
+3 phases of an event=====
+capturing=when event dig inside and inside to find the target like html to body to div to...
+at target = when we reach there
+bubbling phase= when we travel back
+
+in which phase from 3 event will be execute, by default bubbling can give explecit by 3rd arg of addEveLis  true->capturing
+
+
+
+ -->
+
+
+
+<!-- event objects====
+
+when browser informs abt event has occured,function inside the addEventListner get the event object which contains information abt the event
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+            hi
+            <a href="https://www.google.com/search?sca_esv=557388832&sxsrf=AB5stBhFA66bOCz3r7xA3hEFUR78CvCUyA:1692184031122&q=Can+Eventlistener+be+applied+at+target+phase%3F&sa=X&ved=2ahUKEwio8cbghOGAAxUjzTgGHWJtDwwQzmd6BAg6EAY&biw=1535&bih=290&dpr=1.25">harsh</a>
+            <a href="https://www.google.com/search?sca_esv=557388832&sxsrf=AB5stBhFA66bOCz3r7xA3hEFUR78CvCUyA:1692184031122&q=Can+Eventlistener+be+applied+at+target+phase%3F&sa=X&ved=2ahUKEwio8cbghOGAAxUjzTgGHWJtDwwQzmd6BAg6EAY&biw=1535&bih=290&dpr=1.25">harsh</a>
+    
+    
+
+    
+        </div>
+
+
+        <article>this is <span>span's</span> code</article>
+
+    <script src="index.js"></script>
+</body>
+</html>

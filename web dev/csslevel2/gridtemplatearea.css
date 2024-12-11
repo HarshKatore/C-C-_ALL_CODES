@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #container {
+    background-color: blueviolet;
+    height: 500px;
+    border: 3px solid black;
+    display: grid; 
+    gap: 15px; 
+  
+    /* grid-template-columns: 310px;
+    grid-template-rows: 90px 90px 90px 90px; */
+  
+
+    /* grid-template-areas:     we name each row*col int grid and specify in each content where to place by specfying ga in its selector breaking flow and specify explecitly content where to place
+    "p"
+    "q"
+    "r"
+    "s"; */
+
+
+    /* grid-template-columns: 310px 333px;
+    grid-template-rows: 90px 90px 90px;
+    grid-template-areas: 
+    "p p"
+    "q q" but should do iit continous and meaningfully adamadat nahi
+    "r s";
+  }
+  .box {
+    background-color: aquamarine;
+    border: 3px solid black;
+    
+  } */
+
+
+  grid-template-columns: 310px 333px 300px;
+    grid-template-rows: 90px 90px ;
+    grid-template-areas: 
+    "p p p p p p p p"    /* it makes 3/5 d and 2/5 p */
+    "q q q q q q q s"
+    "r r r r r r r r ";  /*extra row dil tri empty row madi adjust krte and extra col asl tr traction madi game khelte*/
+  }
+  .box {
+    background-color: aquamarine;
+    border: 3px solid black;
+    
+  }
+
+  #i1{
+grid-area: q;
+  }
+  #i2{
+grid-area: p;
+  }
+  #i3{
+grid-area: s;
+  }
+  #i4{
+grid-area: r;
+  }
+  
+  
+  

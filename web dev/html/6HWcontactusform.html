@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code help- contact us</title>
+</head>
+<body>
+    <!-- we can do this from table but we shoud always go by semantics ie purpose wise usage of assets so here we need form only  -->
+    <h1>Welcome to CodeHelp!</h1>
+    <h2>Contact Us Form</h2>                                 <!--	h is a block element so no need of br -->
+    <form action="">
+        <label for="name">Name</label>                            <!--	inside for we gave id same as id in input tag to map after input will priny labled text before input box/ -->
+        <input type="text" name="name" id="name" placeholder="Enter Your Name">
+        <br>
+        <label for="Email">Email</label>                            
+        <input type="text" name="Email" id="Email" placeholder="Enter Your Email">   <!--	for now name is of no use only id is mapped with for in label but after submit form goes on backend/server to contact codehelp while doing this name is identity like it is email or name for srver its use is in js ..-->
+        <br>
+        <label for="contact">Contact</label>                            
+        <input type="number" name="contact" id="contact" >
+        <br>
+        <label for="gender">Gender</label>                            
+        <select name="gender" id="gender" > 
+            <option value="select">Select</option>                                <!--	value  is what do go at backend "Male will not go" actually value ie male goes and backend will be knwing what to do for corresponding value-->
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="nottosay">Not to Say</option>
+        </select>
+        <br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="date" id="dob">
+        <br>
+       <span>Rating</span>  <!--	see here name is  being used if is conveying that all 5 are part of one element only so we cant tick two at a time if name for all 5 difft then can do-->
+        <input type="radio" name="rating" id="rating1" value="1">
+        <label for="rating1">1</label>
+        <input type="radio" name="rating" id="rating2" value="2">
+        <label for="rating2">2</label>
+        <input type="radio" name="rating" id="rating3" value="3">
+        <label for="rating3">3</label>
+        <input type="radio" name="rating" id="rating4" value="4">
+        <label for="rating4">4</label>
+        <input type="radio" name="rating" id="rating5" value="5">
+        <label for="rating5">5</label>
+        
+        <br>
+        <label for="msg">Enter Your Message</label>  
+        <br>                         
+        <textarea name="message" id="msg" cols="30" rows="5" placeholder="Write your message"></textarea>
+
+        <br>
+        <input type="submit" name="submit" id="submit" name="Submit">         <!--	here name is the text shown on button on browser ...after submitting all info makes packet and will be send to backend but here no action is defined so nothing happens noly all get reset -->
+        <input type="reset" name="reset" id="reset" name="Reset">
+        
+        <!-- for image src do 'copy image address' on chrome -->
+        <footer>
+            <a href="https://youtube.com" target="_blank"><img src="https://tse1.mm.bing.net/th?id=OIP.Wsr9KPgB_3k8nX2LekNazAAAAA&pid=Api&P=0" alt="youtube" width="40" height="40"></a>
+            <a href="https://instagram.com" target="_blank"><img src="https://tse3.mm.bing.net/th?id=OIP.JCI8klaaA1w4LCtljpeJoAHaHa&pid=Api&P=0" alt="instagram" width="40" height="40"></a>
+            <a href="https://telegram.com" target="_blank"><img src="https://tse3.mm.bing.net/th?id=OIP.uxu7sybr0t5Ob3UpmBvt9wHaHa&pid=Api&P=0" alt="telegram" width="40" height="40"></a>
+        </footer>
+    </form>
+</body>
+</html>

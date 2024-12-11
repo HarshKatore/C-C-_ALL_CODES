@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+        table, tr, td{
+            border: 3px solid black ;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+
+
+        <!-- extra from hw but new concept of coloring Imp -->
+        <colgroup>
+            <col span="1" style="background-color:blueviolet;">
+            <col span="2" style="background-color: aqua;">                  <!--	go sequence wise coloring ,if in between you dont want to color any column remove style-->
+            <col span="1" >
+        </colgroup>
+
+
+
+        <thead>
+            
+                    <tr>
+                        <td rowspan="3">Day</td>
+                        <td colspan="3">Seminar</td>
+                        
+                    </tr>
+                    <tr>
+                        
+                        <td colspan="2">Schedule</td>
+                        
+                        <td rowspan="2">Topic</td>
+                    </tr>
+                    <tr>
+                        
+                        <td >Begin</td>
+                        <td >End</td>
+                        
+                        
+                    </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td rowspan="2">Monday</td>
+                <td rowspan="2">8:00 am</td>
+                <td rowspan="2">5:00 pm</td>
+                <td>Physics</td>
+            </tr>
+            <tr>
+                
+               
+                <td>Geography</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Tuesday</td>
+                <td>8:00 am</td>
+                <td>5:00 pm</td>
+                <td rowspan="2">History</td>
+            </tr>
+            <tr>
+               
+                <td>8:00 am</td>
+                <td>5:00 pm</td>
+                
+            </tr>
+            <tr>
+               
+                <td>8:00 am</td>
+                <td>5:00 pm</td>
+                <td>Mathematics</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>8:00 am</td>
+                <td>5:00 pm</td>
+                <td>English</td>
+            </tr>
+        </tbody>
+        
+
+        
+    </table>
+</body>
+</html>
+<!-- 
+
+    always layout accordingly heder is headings of table body is values or main body part and footer is summaryof body like sum total.
+ -->

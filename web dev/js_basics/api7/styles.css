@@ -1,0 +1,3 @@
+/* api is a intermediate which server to be a communication channel between two software components 
+like say a client side computer is requestion some info from a server like fb or say any whether site then
+ we take a subscription for it and api key is assigned then by integrating this api link and api we can get this info in the form of promise , then convert to json ie inthe form of js object*/

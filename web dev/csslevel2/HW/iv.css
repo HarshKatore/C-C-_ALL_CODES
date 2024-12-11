@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+#wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px; /*w is of img size if but will not exceed 1.2k*/
+  height: 100%;
+  margin: 0 auto;/* at centre and both side equal spacing */
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  width: 32%; /*32% *3 =96 */
+
+  position: relative; /*for one  thing over other upper is absolute and its first parent should be relative*/
+  overflow: hidden;
+  border-radius: 10px; /*edges round*/
+  margin-bottom: 20px; /**/
+}
+.card img {
+  /*card class madla img*/
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%); /*make gray*/
+  box-shadow: 0 0 20px #333;
+  object-fit: cover;
+}
+.card:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 10px #333);
+  transition: 0.3s;
+}
+.card:hover img {
+  filter: grayscale(0%);
+}
+.card figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px;
+  width: 100%;
+  height: 20%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0)
+  );
+  transition: 0.3s;
+}
+.card:hover figcaption {
+  opacity: 1;
+  transform: scale(1.03);
+}

@@ -1,0 +1,39 @@
+/* by default it  is 1]static */
+div{
+    display: inline-block;
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    background-color: aqua;
+
+}
+
+  #i4{
+    position: relative;  /*relative to normal ie its original*/
+    left: 100px;
+    top: 100px;
+   
+
+}
+#i2{
+    position: fixed;/*non scrollable ie fixed relative to browser window*/
+       
+}
+
+.enclosed{
+    width: 100vw;
+    height: 1000px;
+    background-color: yellow;
+}
+
+#i3{
+    position: absolute;  /*relative to nearest ansistor if like outer div if two div are within ,if no such ansistor then wrt body ie viewport*/
+    left: 30px;
+    top: 400px;
+   
+/* absolute ele is removed from normal flow hence can overlap with normal */
+}
+#i1{
+position: sticky;  /* when scrolled upmost it acts like fixed and whern free its relative  see it leave 30 from top*/
+top: 30px;
+}
